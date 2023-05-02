@@ -19,7 +19,7 @@ class Cronometro extends StatelessWidget {
             children: [
               Text(
                 store.estaTrabalhando() ? 'Hora de Trabalhar' : 'Hora de Descansar',
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 40,
                   color: Colors.white,
                 ),
@@ -27,18 +27,18 @@ class Cronometro extends StatelessWidget {
               const SizedBox(height: 30),
               Text(
                 "${store.minutos.toString().padLeft(2, '0')}:${store.segundos.toString().padLeft(2, '0')}",
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 120,
                   color: Colors.white,
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   if (!store.iniciado)
                     Padding(
-                      padding: EdgeInsets.only(right: 10),
+                      padding: const EdgeInsets.only(right: 10),
                       child: CronometroBotao(
                         texto: "Iniciar",
                         icone: Icons.play_arrow,
@@ -47,7 +47,7 @@ class Cronometro extends StatelessWidget {
                     ),
                   if (store.iniciado)
                     Padding(
-                      padding: EdgeInsets.only(right: 10),
+                      padding: const EdgeInsets.only(right: 10),
                       child: CronometroBotao(
                         texto: "Parar",
                         icone: Icons.stop,
@@ -55,7 +55,7 @@ class Cronometro extends StatelessWidget {
                       ),
                     ),
                   Padding(
-                    padding: EdgeInsets.only(left: 10),
+                    padding: const EdgeInsets.only(left: 10),
                     child: CronometroBotao(
                       texto: "Reiniciar",
                       icone: Icons.refresh,
