@@ -1,8 +1,12 @@
 # pomodoro_mobx
 
-# Imcompleto ainda
+# Projeto completo
+
+"build.yaml" foi criado para tornar o processo de execução do comando "fvm flutter pub run build_runner watch" mais rápido. Quando executado sem o arquivo, o processo demora cerca de 18,0 segundos, mas com as configurações do arquivo, demora apenas 1,5 segundos. Isso ocorre porque o Flutter procura arquivos ".dart" em toda a aplicação, mas ao usar o arquivo "build.yaml", o processo de geração de código para o MobX é limitado à procura apenas dos arquivos em "lib/store" que possuem a extensão ".store.dart", tornando a busca mais eficiente e rápida.
 
 A new Flutter project.
+
+O aplicativo é baseado em um cronômetro que permite controlar o tempo de trabalho e descanso, e as modificações são realizadas utilizando MobX.
 
 ## Getting Started
 
